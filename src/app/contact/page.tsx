@@ -18,7 +18,7 @@ const contact: React.FC = () => {
 
                     <div className="border rounded-xl shadow-xl p-5 mt-10 md:mt-0">
                         <span className="font-bold text-xl mb-4">Customer Support</span>
-                        <p className="mb-6 mt-2">If you have any questions, concerns, or need assistance, our dedicated customer support team is here to help you. Please don't hesitate to reach out to us via email or phone.</p>
+                        <p className="mb-6 mt-2">If you have any questions, concerns, or need assistance, our dedicated customer support team is here to help you. Please dont hesitate to reach out to us via email or phone.</p>
                         <span className="font-bold"> Email: support@yourcompany.com</span>
                         <br />
                         <span className="font-semibold">

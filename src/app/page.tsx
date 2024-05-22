@@ -42,7 +42,7 @@ const Home = () => {
                 />
               </div>
               <h1 className='text-center mt-8 mb-2'>Beyond Travel – We Create Moments!</h1>
-              <p className='w-10/12 text-center'>At JETSET, we don't just plan trips; we craft moments that last a lifetime. Choose us for a travel experience that goes beyond the ordinary. Immerse yourself in the joy of exploration while we handle the details. Join us in creating unforgettable memories and be your passport to extraordinary journeys.
+              <p className='w-10/12 text-center'>At JETSET, we dont just plan trips; we craft moments that last a lifetime. Choose us for a travel experience that goes beyond the ordinary. Immerse yourself in the joy of exploration while we handle the details. Join us in creating unforgettable memories and be your passport to extraordinary journeys.
               </p>
             </div>
             <div className='flex items-center flex-col'>

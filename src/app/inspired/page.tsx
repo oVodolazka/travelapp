@@ -23,7 +23,6 @@ const GetIspired: React.FC = () => {
         try {
             const response: AxiosResponse<IWeatherData[]> = await axios.get('/api/custom/');
             setWeather(response.data);
-            console.log(response.data)
         } catch (error) {
             console.error(error);
         }
