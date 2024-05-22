@@ -11,23 +11,174 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 155, 255;
+    --background-end-rgb: 155, 255, 255;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0%;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 30px;
+  pointer-events: none;
+}
+
+h2 {
+  font-size: 19px;
+  font-weight: 450;
+  line-height: 30px;
+  pointer-events: none;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 350;
+  line-height: 24px;
+  pointer-events: none;
+}
+
+h4 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0%;
+  pointer-events: none;
+}
+
+/* partners css */
+.scroll {
+  --time: 40s;
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-inner {
+  white-space: nowrap;
+  animation: scroll var(--time) linear infinite;
+  animation-delay: calc(var(--time) * -1);
+  align-items: center;
+}
+
+.scroll-inner:nth-child(2) {
+  animation: scroll2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+
+.scroll:hover .scroll-inner {
+  animation: scroll var(--time) linear infinite;
+  animation-delay: 0s;
+}
+
+.scroll:hover .scroll-inner:nth-child(2) {
+  animation: scroll2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+
+.scroll-inner {
+  white-space: nowrap;
+  align-items: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.scroll-inner .scroll-item {
+  width: 274px;
+  padding: 24px;
+  height: 96px;
+  display: inline-flex;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.7s;
+}
+
+/* .rating::before {
+  content: "4,2";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  padding: 12px 12px 5px 12px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.419);
+  background-image: url("/frontpage/star.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: top;
+} */
+
+.bg-maldives {
+  background-image: url("/assets/images/frontpage/maldives-bg.png");
+  background-size: cover;
+}
+
+.bg-maldives h5 {
+  color: white;
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .bg-maldives h5 {
+    color: white;
+    font-size: 25px;
+    font-weight: 450;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+}
+
+.testimonials {
+  background-image: url("/assets/images/frontpage/bg5.jpeg");
+  background-size: cover;
+}
+
+.testionials-pic {
+  top: -50px;
+  left: 35px;
+  width: 80px;
+  height: 80px;
 }
